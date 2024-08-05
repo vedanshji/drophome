@@ -1,0 +1,289 @@
+/*
+-------- vebhv | vaibhav | vabrish ---------
+*/
+
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Baloo Tammudu 2', cursive;
+    background: url('/fitness-website/assets/images/bg-img.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+:root {
+    --white: #f0f0f0;
+    --red: #be3144;
+}
+
+.nav-list {
+    display: flex;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.nav-list li {
+    list-style: none;
+    margin: 14px 24px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--white);
+    transition: .1s ease-out;
+}
+.nav-link:hover{
+    border-bottom: 2px solid var(--white);
+    
+}
+#intro-section {
+    height: 100vh;
+}
+
+.intro-header {
+    color: var(--white);
+    font-size: 4rem;
+}
+
+.intro-header span {
+  color: rgb(245, 92, 92);
+}
+
+.intro-subtitle {
+    color: var(--white);
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.intro-txt-ctn {
+  background: rgba(8,8,8,0.4);
+  padding: 40px;
+  border-radius: 30px;
+}
+
+#intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+    color: var(--white);
+    max-width: 650px;
+    margin: auto;
+    border-bottom: 5px solid var(--white);
+    font-size: 2.5rem;
+    padding: 100px 10px 0 10px;
+}
+
+#programs {
+    height: 100%;
+    padding: 10px 30px;
+}
+
+.project-tile {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.grid-item {
+    text-decoration: none;
+    color: white;
+    height: 400px;
+}
+
+.package-img {
+    width: 100%;
+    height: calc(100% - 75px);
+    object-fit: cover;
+}
+
+.figcaption {
+    font-size: 22px;
+    text-align: center;
+    padding: 8px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    color: var(--white);
+    font-size: 22px;
+    text-decoration: none;
+    width: 150px;
+    margin: auto;
+    padding: 8px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    margin-bottom: 6rem;
+}
+
+.fa {
+    padding: 0 0 0 10px;
+}
+
+.btn:hover {
+    background: var(--red);
+}
+
+#contact {
+    height: 100%;
+    padding: 100px;
+}
+
+.contact-text {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.cont-para {
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+    word-spacing: 1px;
+    color: var(--white);
+}
+
+.contact-header {
+    margin-bottom: 2rem;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: transform .3s ease-in-out;
+}
+
+.contact-links {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-links a:hover {
+    transform: translateY(10px);
+}
+
+footer {
+    display: flex;
+    border-top: 5px solid var(--red);
+    padding: 3rem;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--white);
+}
+
+.footer-fa {
+    color: var(--white);
+    text-decoration: none;
+}
+
+@media (max-width:988px) {
+    .contact-links {
+        flex-direction: column;
+    }
+    .contact-text {
+        font-size: 3rem;
+    }
+    #contact {
+        padding: 50px;
+    }
+}
+
+@media (max-width:520px) {
+    #navbar {
+        justify-content: center;
+        margin-right: 0;
+    }
+    #project-tile {
+        grid-template-columns: 1fr;
+    }
+    .intro-header {
+        font-size: 3rem;
+    }
+    .intro-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:395px) {
+    .intro-header {
+        font-size: 2rem;
+    }
+    #programs {
+        padding: 0;
+    }
+    .nav-list li {
+        margin: 11px;
+    }
+    .grid-item {
+        margin: 10px;
+    }
+    .project-tile {
+        grid-gap: 1rem;
+    }
+    .text-center {
+        font-size: 2rem;
+        padding: 70px 30px  0 30px;
+        border-bottom: 2px solid var(--white);
+    }
+    .figcaption {
+        font-size: 19px;
+    }
+    .btn{
+        margin-bottom: 0px;
+    }
+    .btn-div{
+        height: 100%;
+        margin: 50px;
+    }
+    footer{
+        flex-direction: column;
+        padding: 1rem;
+        
+    }
+    footer p{
+        margin: 20px;
+    }
+}
+/*
+-------- vebhv | vaibhav | vabrish ---------
+*/
