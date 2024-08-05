@@ -17,7 +17,7 @@ html {
 
 body {
     font-family: 'Baloo Tammudu 2', cursive;
-    background: url('https://github.com/vedanshji/drophome/blob/main/assets/images/bg-img.jpg');
+    background: url('/assets/images/bg-img.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
