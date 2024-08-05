@@ -1,6 +1,4 @@
-/*
--------- vebhv | vaibhav | vabrish ---------
-*/
+
 
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
@@ -17,7 +15,7 @@ html {
 
 body {
     font-family: 'Baloo Tammudu 2', cursive;
-    background: url('/assets/images/bg-img.jpg');
+    background: url('assets/images/bg-img.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
