@@ -18,7 +18,14 @@
     });
     
     }
+    window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  if (loader) {
+    loader.style.display = 'none';
+  }
+});
     </script>
+    
   
   <!--
     Cab Driver Client
@@ -26,6 +33,7 @@
   -->
 </head>
 <body>
+    <div id="loader" class="loader"></div>
     <nav id="navbar">
         <ul class="nav-list">
             <li>
@@ -36,6 +44,9 @@
             </li>
             <li>
                 <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li>
+                <a class="nav-link" href="otherservices.html">More Services</a>
             </li>
         </ul>
     </nav>
@@ -120,6 +131,24 @@
             </a>
         </div>
     </section>
+    <section id="pricing">
+        <h2 class="text-center">Our Driver Rates</h2>
+        <div class="pricing-tile">
+          <div class="pricing-item">
+            <h3>Morning Rate</h3>
+            <p>8 hours - ₹1000</p>
+          </div>
+          <div class="pricing-item">
+            <h3>Afternoon Rate</h3>
+            <p>5 hours - ₹1000</p>
+          </div>
+          <div class="pricing-item">
+            <h3>Hourly Rate</h3>
+            <p>₹200 per hour</p>
+          </div>
+        </div>
+      </section>
+      <br>
     <footer>
         <p>
             Effortless Rides with Professional Drivers

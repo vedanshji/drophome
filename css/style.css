@@ -33,30 +33,36 @@ body {
 }
 
 #navbar {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    font-size: 1.5rem;
     position: fixed;
     top: 0;
-    right: 0;
     left: 0;
-}
+    width: 100%;
+    background-color: #333; /* Adjust background color as needed */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
 
-.nav-list li {
-    list-style: none;
-    margin: 14px 24px;
-}
+  .nav-list {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
-.nav-link {
-    text-decoration: none;
-    color: var(--white);
-    transition: .1s ease-out;
-}
-.nav-link:hover{
-    border-bottom: 2px solid var(--white);
-    
-}
+  .nav-list li {
+    margin: 0 15px; /* Space out the items */
+  }
+
+  .nav-link {
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 15px 20px; /* Add some padding */
+    display: block; /* Make the entire area clickable */
+  }
+  
+  .nav-link:hover {
+    background-color: #555; /* Background color on hover */
+  }
 #intro-section {
     height: 100vh;
 }
@@ -281,7 +287,81 @@ footer {
     footer p{
         margin: 20px;
     }
+
 }
-/*
--------- vebhv | vaibhav | vabrish ---------
-*/
+#pricing h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  /*color: #333;  This sets the color of the heading text; adjust as needed */
+}
+
+.pricing-tile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pricing-item {
+    background: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); /* Adjust width for responsiveness */
+    max-width: 300px;
+    text-align: center;
+  }
+
+.pricing-item h3,
+.pricing-item p {
+  color: #fff; /* White text color */
+}
+
+.pricing-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.pricing-item p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .pricing-item {
+    width: 100%;
+  }
+}
+/* Loader container styling */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000; /* High z-index to overlay other content */
+  }
+  
+  /* Loader animation styling */
+  .loader {
+    border: 8px solid #f3f3f3; /* Light grey background */
+    border-top: 8px solid #3498db; /* Blue color for the spinner */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Spinner animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+/* --------rabs--------- */
