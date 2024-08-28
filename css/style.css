@@ -12,15 +12,15 @@
 html {
     scroll-behavior: smooth;
 }
-/*
+
 body {
     font-family: 'Baloo Tammudu 2', cursive;
-    background: url('../assets/images/bg-img.jpg');
+    background: url('../assets/images/bg-img2.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
-*/
+
 :root {
     --white: #f0f0f0;
     --red: #be3144;
@@ -334,72 +334,66 @@ footer {
   }
 }
 /* Loader container styling */
-/* From Uiverse.io by alexruix */ 
-.loader {
-    width: 48px;
-    height: 48px;
-    margin: auto;
-    position: relative;
-  }
-  
-  .loader:before {
-    content: '';
-    width: 48px;
-    height: 5px;
-    background: #f0808050;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    border-radius: 50%;
-    animation: shadow324 0.5s linear infinite;
-  }
-  
-  .loader:after {
-    content: '';
-    width: 100%;
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
     height: 100%;
-    background: #f08080;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 4px;
-    animation: jump7456 0.5s linear infinite;
-  }
-  
-  @keyframes jump7456 {
-    15% {
-      border-bottom-right-radius: 3px;
+    width: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.lds-hourglass,
+.lds-hourglass:after {
+    box-sizing: border-box;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: fixed; /* Changed to fixed for proper centering */
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin: -40px 0 0 -40px; /* Centering the loader */
+    border: 2px solid red; /* For debugging visibility */
+}
+
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid currentColor;
+    border-color: #000 transparent #000 transparent; /* Loader color */
+    animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
-  
-    25% {
-      transform: translateY(9px) rotate(22.5deg);
-    }
-  
     50% {
-      transform: translateY(18px) scale(1, .9) rotate(45deg);
-      border-bottom-right-radius: 40px;
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     }
-  
-    75% {
-      transform: translateY(9px) rotate(67.5deg);
-    }
-  
     100% {
-      transform: translateY(0) rotate(90deg);
+        transform: rotate(1800deg);
     }
-  }
-  
-  @keyframes shadow324 {
-  
-    0%,
-      100% {
-      transform: scale(1, 1);
-    }
-  
-    50% {
-      transform: scale(1.2, 1);
-    }
-  }
-  
+}
+
+.content {
+    display: none; /* Hide content initially */
+}
+/*
+.lds-hourglass {
+    border: 2px solid red;  For debugging visibility 
+}
+*/
 
 /* --------rabs--------- */
