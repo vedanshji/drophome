@@ -12,7 +12,7 @@
 html {
     scroll-behavior: smooth;
 }
-
+/*
 body {
     font-family: 'Baloo Tammudu 2', cursive;
     background: url('../assets/images/bg-img.jpg');
@@ -20,7 +20,7 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
-
+*/
 :root {
     --white: #f0f0f0;
     --red: #be3144;
@@ -334,33 +334,71 @@ footer {
   }
 }
 /* Loader container styling */
-#loader {
-    position: fixed;
-    top: 0;
+/* From Uiverse.io by alexruix */ 
+.loader {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .loader:before {
+    content: '';
+    width: 48px;
+    height: 5px;
+    background: #f0808050;
+    position: absolute;
+    top: 60px;
     left: 0;
+    border-radius: 50%;
+    animation: shadow324 0.5s linear infinite;
+  }
+  
+  .loader:after {
+    content: '';
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10000; /* High z-index to overlay other content */
+    background: #f08080;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    animation: jump7456 0.5s linear infinite;
   }
   
-  /* Loader animation styling */
-  .loader {
-    border: 8px solid #f3f3f3; /* Light grey background */
-    border-top: 8px solid #3498db; /* Blue color for the spinner */
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
+  @keyframes jump7456 {
+    15% {
+      border-bottom-right-radius: 3px;
+    }
+  
+    25% {
+      transform: translateY(9px) rotate(22.5deg);
+    }
+  
+    50% {
+      transform: translateY(18px) scale(1, .9) rotate(45deg);
+      border-bottom-right-radius: 40px;
+    }
+  
+    75% {
+      transform: translateY(9px) rotate(67.5deg);
+    }
+  
+    100% {
+      transform: translateY(0) rotate(90deg);
+    }
   }
   
-  /* Spinner animation */
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  @keyframes shadow324 {
+  
+    0%,
+      100% {
+      transform: scale(1, 1);
+    }
+  
+    50% {
+      transform: scale(1.2, 1);
+    }
   }
   
 
