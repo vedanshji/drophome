@@ -1,199 +1,140 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
   <title>TopDriverService - Rent Professional Drivers Anytime, Anywhere</title>
-    <meta name="description" content="TopDriverService provides professional drivers for rent. Whether you need a driver for a day, a week, or longer, we have experienced drivers ready to serve you. Book now for reliable and safe driving services.">
-    <meta name="keywords" content="New Delhi driver service, professional drivers New Delhi, hire a driver New Delhi, rent a driver Delhi, chauffeur service New Delhi, airport transfers Delhi, long-distance driver service, personal driver New Delhi, safe transportation New Delhi, reliable driver services, city tour drivers Delhi, affordable driver rentals, corporate driver service Delhi, hourly driver service, executive chauffeur New Delhi, luxury car rental Delhi, on-demand driver service, family travel drivers, local drivers in Delhi">
-
-
+  <meta name="description" content="TopDriverService provides professional drivers for rent. Whether you need a driver for a day, a week, or longer, we have experienced drivers ready to serve you. Book now for reliable and safe driving services.">
+  <meta name="keywords" content="New Delhi driver service, professional drivers New Delhi, hire a driver New Delhi, rent a driver Delhi, chauffeur service New Delhi, airport transfers Delhi, long-distance driver service, personal driver New Delhi, safe transportation New Delhi, reliable driver services, city tour drivers Delhi, affordable driver rentals, corporate driver service Delhi, hourly driver service, executive chauffeur New Delhi, luxury car rental Delhi, on-demand driver service, family travel drivers, local drivers in Delhi">
   <meta name="robots" content="index, follow">
-  <meta charset="UTF-8">
-
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Service data (edit THIS file to add/remove services) + rendering logic -->
+  <script src="js/services-data.js" defer></script>
+  <script src="js/script.js" defer></script>
+
   <script>
-        window.onload = ()=>{
-  AOS.init({
-    duration: 1000,
-    delay: 50,
-    });
-
+    window.onload = () => {
+      AOS.init({
+        duration: 1000,
+        delay: 50,
+      });
     }
-    
-    </script>
+  </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17364690388"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17364690388"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17364690388');
+  </script>
 
-  gtag('config', 'AW-17364690388');
-</script>
-
-  
   <!--
     Cab Driver Client
-  
   -->
 </head>
+
 <body>
-    <!-- <div class="lds-hourglass" id="loader"></div> -->
-    <nav id="navbar">
-        <ul class="nav-list">
-            <li>
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li>
-                <a class="nav-link" href="#programs">Services</a>
-            </li>
-            <li>
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li>
-                <a class="nav-link" href="otherservices.html">More</a>
-            </li>
-        </ul>
-    </nav>
-    <section id="intro-section">
-        <div class="intro-txt-ctn">
-            <h5 class="text-white">24x7 services</h5>
-          <h1 class="intro-header" data-aos="fade-left">Top<span>Driver</span>Service</h1> <br>
-          <p class="intro-subtitle" data-aos="fade-right">Effortless Rides with Professional Drivers</p>
-        </div>
-    </section>
-    <!-- intro-section ended here -->
-    <section id="programs">
-        <h1 class="text-center" data-aos="fade-down">These are some sorts of programs we've</h1>
-        <div class="project-tile">
-            <a href="#" class="grid-item" data-aos="flip-left">
-                <img class="package-img" src="assets/images/pic3.jpg"
-                    alt="">
-             
-                <p class="figcaption">
-                    <span class="">Get You Driver Service</span>
-                </p>
-            </a>
-            <a href="#" class="grid-item" data-aos="flip-right">
-                <img class="package-img"
-                    src="assets/images/pic2.jpg" alt="">
-                <p class="figcaption">
-                    <span class="">Interstate Service </span>
-                </p>
-            </a>
-            <a href="#" class="grid-item" data-aos="flip-left">
-                <img class="package-img" src="assets/images/pic1.jpg" alt="">
-                <p class="figcaption">
-                    <span class="">Long Trips</span>
-                </p>
-            </a>
-            <a href="#" class="grid-item" data-aos="flip-right">
-                <img class="package-img" src="assets/images/pic4.jpg" alt="">
-                <p class="figcaption">
-                    <span class="">Personal Driver Service </span>
-                </p>
-            </a>
-            <a href="#" class="grid-item" data-aos="flip-left">
-                <img class="package-img" src="assets/images/pic6.jpg" alt="">
-                <p class="figcaption">
-                    <span class="">City Roam Service </span>
-                </p>
-            </a>
-            <a href="#" class="grid-item" data-aos="flip-right">
-                <img class="package-img" src="assets/images/pic5.jpg"
-                    alt="">
-                <p class="figcaption">
-                    <span class="">Airport Drops</span>
-                </p>
-            </a>
-        </div>
-        <!-- <div class="btn-div" data-aos="fade-up">
-            <a href="#" class="btn">Join
-                <i class="fa fa-chevron-right"></i>
-            </a>
-        </div> -->
-    </section>
-    <section id="contact">
-        <div class="contact-header">
-            <h1 class="contact-text" data-aos="fade-down">Let's get find your driver...</h1>
-        </div>
+  <nav id="navbar">
+    <ul class="nav-list">
+      <li><a class="nav-link" href="#">Home</a></li>
+      <li><a class="nav-link" href="#programs">Services</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+      <li><a class="nav-link" href="otherservices.html">More</a></li>
+    </ul>
+  </nav>
 
-        <div class="contact-links">
-
-
-            
-            <a href="tel:+919555647312" data-aos="flip-right">
-                <i class="fa fa-phone"></i>
-                Call Now
-            </a>
-        </div>
-    </section>
-    <div class="banner">
-       Book Now at +919555647312, +919818546871, +919999 809597
+  <section id="intro-section">
+    <div class="intro-txt-ctn">
+      <h5 class="text-white">24x7 services</h5>
+      <h1 class="intro-header" data-aos="fade-left">Top<span>Driver</span>Service</h1> <br>
+      <p class="intro-subtitle" data-aos="fade-right">Effortless Rides with Professional Drivers</p>
     </div>
-    <section id="pricing">
-        <h2 class="text-center">Our Driver Rates</h2>
-        <div class="pricing-tile">
-          <div class="pricing-item">
-            <h3>Morning Rate</h3>
-            <p>8 hours - ₹1000</p>
-          </div>
-          <div class="pricing-item">
-            <h3>Afternoon Rate</h3>
-            <p>5 hours - ₹1000</p>
-          </div>
-          <div class="pricing-item">
-            <h3>Hourly Rate</h3>
-            <p>₹200 per hour</p>
-          </div>
-        </div>
-      <br>
-        <div class="pricing-tile">
-            <div class="pricing-item">
-              <h3>Night Rate</h3>
-              <p>2 hours - ₹750</p>
-            </div>
-            <div class="pricing-item">
-              <h3>Tour Rate</h3>
-              <p>12 hours - ₹1500</p>
-            </div>
-            <div class="pricing-item">
-              <h3>Night Stay Rate</h3>
-              <p>₹250 per hour</p>
-            </div>
-          </div>
-      </section>
-      <br>
-      <footer>
-        <div class="footer-content">
-            <div class="about-us">
-                <h3>About Us</h3>
-                <p>Welcome to TopDriverService, your premier choice for professional driver services in New Delhi. Our mission is to provide safe, reliable, and convenient transportation solutions tailored to your needs. With a team of experienced and vetted drivers, we ensure that you enjoy effortless rides across the city. Whether you need a driver for a day, for airport transfers, or for long trips, TopDriverService is here to make your travel experience seamless and enjoyable.</p>
-            </div>
-            
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Address: D-513, Chungi, No-3 Lal-Kuan - 110044</p> 
-            </div>
-        </div>
-        
-     
-    </footer>
-    
-    
+  </section>
+  <!-- intro-section ended here -->
+
+  <section id="programs">
+    <h1 class="text-center" data-aos="fade-down">These are some sorts of programs we've</h1>
+    <!--
+      Service cards are rendered here automatically from js/services-data.js.
+      To add a new service, edit that file only — do NOT add cards by hand here.
+    -->
+    <div class="project-tile" id="services-grid"></div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-header">
+      <h1 class="contact-text" data-aos="fade-down">Let's get find your driver...</h1>
+    </div>
+
+    <div class="contact-links">
+      <a href="tel:+919555647312" data-aos="flip-right">
+        <i class="fa fa-phone"></i>
+        Call Now
+      </a>
+    </div>
+  </section>
+
+  <div class="banner">
+    Book Now at +919555647312, +919818546871, +919999 809597
+  </div>
+
+  <section id="pricing">
+    <h2 class="text-center">Our Driver Rates</h2>
+    <div class="pricing-tile">
+      <div class="pricing-item">
+        <h3>Morning Rate</h3>
+        <p>8 hours - ₹1000</p>
+      </div>
+      <div class="pricing-item">
+        <h3>Afternoon Rate</h3>
+        <p>5 hours - ₹1000</p>
+      </div>
+      <div class="pricing-item">
+        <h3>Hourly Rate</h3>
+        <p>₹200 per hour</p>
+      </div>
+    </div>
+    <br>
+    <div class="pricing-tile">
+      <div class="pricing-item">
+        <h3>Night Rate</h3>
+        <p>2 hours - ₹750</p>
+      </div>
+      <div class="pricing-item">
+        <h3>Tour Rate</h3>
+        <p>12 hours - ₹1500</p>
+      </div>
+      <div class="pricing-item">
+        <h3>Night Stay Rate</h3>
+        <p>₹250 per hour</p>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <footer>
+    <div class="footer-content">
+      <div class="about-us">
+        <h3>About Us</h3>
+        <p>Welcome to TopDriverService, your premier choice for professional driver services in New Delhi. Our mission is to provide safe, reliable, and convenient transportation solutions tailored to your needs. With a team of experienced and vetted drivers, we ensure that you enjoy effortless rides across the city. Whether you need a driver for a day, for airport transfers, or for long trips, TopDriverService is here to make your travel experience seamless and enjoyable.</p>
+      </div>
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>Address: D-513, Chungi, No-3 Lal-Kuan - 110044</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
 
-  <!--
-  
-  --------rabs---------
-  
-  -->
+<!--
+--------rabs---------
+-->
